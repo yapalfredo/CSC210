@@ -18,14 +18,14 @@ public class Profile {
     private int numberOfCourses;
     private String semester;
     private String major;
-    private byte creditsThisSemester;
+    private int creditsThisSemester;
 
 //Constructors
     public Profile(){
         
     }
 
-    public Profile(String fName, String lName, String userName, String classRank, int numberOfCourses, String semester, String major, byte creditsThisSemester) {
+    public Profile(String fName, String lName, String userName, String classRank, int numberOfCourses, String semester, String major, int creditsThisSemester) {
         this.fName = fName;
         this.lName = lName;
         this.userName = userName;
@@ -36,7 +36,7 @@ public class Profile {
         this.creditsThisSemester = creditsThisSemester;
     }
 
-    public Profile(String fName, String lName, String userName, String semester, String major, byte creditsThisSemester) {
+    public Profile(String fName, String lName, String userName, String semester, String major, int creditsThisSemester) {
         this.fName = fName;
         this.lName = lName;
         this.userName = userName;
@@ -45,7 +45,7 @@ public class Profile {
         this.creditsThisSemester = creditsThisSemester;
     }
 
- 
+    
 // Getters
     public String getfName() {
         return fName;
@@ -75,13 +75,18 @@ public class Profile {
         return semester;
     }
     
-    public byte getCreditsThisSemester() {
+    public int getCreditsThisSemester() {
         return creditsThisSemester;
     }
     
 //Setters
     public void setfName(String fName) {
-        this.fName = fName;
+        if(fName.length()<=15){
+                 this.fName = fName;
+        }
+        else{
+            this.fName = "";
+        }
     }
 
     public void setlName(String lName) {
@@ -108,7 +113,7 @@ public class Profile {
         this.semester = semester;
     }
     
-    public void setCreditsThisSemester(byte creditsThisSemester) {
+    public void setCreditsThisSemester(int creditsThisSemester) {
         this.creditsThisSemester = creditsThisSemester;
     }
         
