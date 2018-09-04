@@ -36,7 +36,30 @@ public class Main {
         student3.setCreditsThisSemester(12);
         student3.setNumberOfCourses(4);
         
+        System.out.println("Student 1's first name is: " + student1.getfName());
+        System.out.println("Student 1's last name is: "+student1.getlName());
+        System.out.println("Student 1's Username is: "+student1.getUserName());
+        System.out.println("Student 1's Classrank is: "+student1.getClassRank());
+        System.out.println("Student 1's Major is: "+ student1.getMajor());
+        System.out.println("Student 1's Credits is: "+student1.getCreditsThisSemester());
         
+        System.out.println("");
+        
+        System.out.println("Student 2's first name is: " + student2.getfName());
+        System.out.println("Student 2's last name is: "+student2.getlName());
+        System.out.println("Student 2's Username is: "+student2.getUserName());
+        System.out.println("Student 2's Classrank is: "+student2.getClassRank());
+        System.out.println("Student 2's Major is: "+ student2.getMajor());
+        System.out.println("Student 2's Credits is: "+student2.getCreditsThisSemester());
+        
+        System.out.println("");
+        
+        System.out.println("Student 3's first name is: " + student3.getfName());
+        System.out.println("Student 3's last name is: "+student3.getlName());
+        System.out.println("Student 3's Username is: "+student3.getUserName());
+        System.out.println("Student 3's Classrank is: "+student3.getClassRank());
+        System.out.println("Student 3's Major is: "+ student3.getMajor());
+        System.out.println("Student 3's Credits is: "+student3.getCreditsThisSemester());
         
         
     }
