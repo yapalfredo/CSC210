@@ -67,8 +67,8 @@ public class main {
                     dblAdjClose = 0;
                     intVolume=0;
                 }
-               System.out.println(date + " " + dblOpen + " " + dblHigh + " " + dblLow + " " + dblClose + " "+ dblAdjClose + " "+ intVolume);
-               
+             //  System.out.println(date + " " + dblOpen + " " + dblHigh + " " + dblLow + " " + dblClose + " "+ dblAdjClose + " "+ intVolume);
+                System.out.printf("Date: %-12s Open: $%-13f High: $%-13f Low: $%-13f Close: $%-13f Adjusted Close: $%-13f Volume: %,-14d DOLLAR VOLUME: $%,-20.2f AVERAGE PRICE: $%,-15f\n", date,dblOpen,dblHigh,dblLow,dblClose,dblAdjClose, intVolume, (dblClose*intVolume), (dblOpen+dblLow+dblHigh+dblClose)/4);
             }
 
         } catch (FileNotFoundException e) {
