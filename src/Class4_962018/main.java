@@ -47,29 +47,29 @@ public class main {
                 String adjustedClose = line.substring(locationOfFifthComma+1, locationOfSixthComma);
                 String volume = line.substring(locationOfSixthComma+1);
                 
-                double [] stockPerformance= new double[5];
+                double [] dailyPrices= new double[5];
                 int intVolume;
                 try{                   
-                     stockPerformance[0] = Double.parseDouble(open);                 //open
-                     stockPerformance[1] = Double.parseDouble(high);                 //high
-                     stockPerformance[2] = Double.parseDouble(low);                  //low
-                     stockPerformance[3] = Double.parseDouble(close);                //close
-                     stockPerformance[4] = Double.parseDouble(adjustedClose);        //adjClose
+                     dailyPrices[0] = Double.parseDouble(open);                 //open
+                     dailyPrices[1] = Double.parseDouble(high);                 //high
+                     dailyPrices[2] = Double.parseDouble(low);                  //low
+                     dailyPrices[3] = Double.parseDouble(close);                //close
+                     dailyPrices[4] = Double.parseDouble(adjustedClose);        //adjClose
                      intVolume = Integer.parseInt(volume);                           //volume
                 }catch (NumberFormatException e){
                    // System.out.println(e.getLocalizedMessage());
                    e.printStackTrace();
-                    stockPerformance[0] = 1;
-                    stockPerformance[1] = 1;
-                    stockPerformance[2] = 1;
-                    stockPerformance[3] = 1;
-                    stockPerformance[4] = 1;
+                    dailyPrices[0] = 1;
+                    dailyPrices[1] = 1;
+                    dailyPrices[2] = 1;
+                    dailyPrices[3] = 1;
+                    dailyPrices[4] = 1;
                     intVolume = 1;
                 }
          
                 System.out.printf("Date: %-12s Open: $%-13f High: $%-13f Low: $%-13f Close: $%-13f Adjusted Close: $%-13f Volume: %,-14d DOLLAR VOLUME: $%,-20.2f AVERAGE PRICE: $%,-15f\n", 
-                        date,stockPerformance[0],stockPerformance[1],stockPerformance[2],stockPerformance[3],stockPerformance[4], 
-                        intVolume, (stockPerformance[3]*intVolume), (stockPerformance[0]+stockPerformance[1]+stockPerformance[2]+stockPerformance[3])/4);
+                        date,dailyPrices[0],dailyPrices[1],dailyPrices[2],dailyPrices[3],dailyPrices[4], 
+                        intVolume, (dailyPrices[3]*intVolume), (dailyPrices[0]+dailyPrices[1]+dailyPrices[2]+dailyPrices[3])/4);
             }
 
         } catch (FileNotFoundException e) {
