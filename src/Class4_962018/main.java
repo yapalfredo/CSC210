@@ -30,9 +30,8 @@ public class main {
 
             String line = "";
             bf.readLine();
-            while ((line = bf.readLine()) != null) {
-               
-                
+            while ((line = bf.readLine()) != null) {               
+           
                 int locationOfFirstComma = line.indexOf(",");
                 int locationOfSecondComma = line.indexOf(",", locationOfFirstComma + 1);
                 int locationOfThirdComma = line.indexOf(",", locationOfSecondComma + 1);
@@ -48,8 +47,6 @@ public class main {
                 String adjustedClose = line.substring(locationOfFifthComma+1, locationOfSixthComma);
                 String volume = line.substring(locationOfSixthComma+1);
                 
-
-                double dblOpen, dblHigh, dblLow, dblClose,dblAdjClose;
                 double [] stockPerformance= new double[5];
                 int intVolume;
                 try{                   
