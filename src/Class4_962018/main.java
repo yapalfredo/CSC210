@@ -50,25 +50,29 @@ public class main {
                 
 
                 double dblOpen, dblHigh, dblLow, dblClose,dblAdjClose;
+                double [] stockPerformance= new double[5];
                 int intVolume;
                 try{                   
-                     dblOpen = Double.parseDouble(open);
-                     dblHigh = Double.parseDouble(high);
-                     dblLow = Double.parseDouble(low);
-                     dblClose = Double.parseDouble(close);
-                     dblAdjClose = Double.parseDouble(adjustedClose);
-                     intVolume = Integer.parseInt(volume);
+                     stockPerformance[0] = Double.parseDouble(open);                 //open
+                     stockPerformance[1] = Double.parseDouble(high);                 //high
+                     stockPerformance[2] = Double.parseDouble(low);                  //low
+                     stockPerformance[3] = Double.parseDouble(close);                //close
+                     stockPerformance[4] = Double.parseDouble(adjustedClose);        //adjClose
+                     intVolume = Integer.parseInt(volume);                           //volume
                 }catch (NumberFormatException e){
-                    System.out.println(e.getLocalizedMessage());
-                    dblOpen = 0;
-                    dblHigh = 0;
-                    dblLow = 0;
-                    dblClose = 0;
-                    dblAdjClose = 0;
-                    intVolume=0;
+                   // System.out.println(e.getLocalizedMessage());
+                   e.printStackTrace();
+                    stockPerformance[0] = 1;
+                    stockPerformance[1] = 1;
+                    stockPerformance[2] = 1;
+                    stockPerformance[3] = 1;
+                    stockPerformance[4] = 1;
+                    intVolume = 1;
                 }
-             //  System.out.println(date + " " + dblOpen + " " + dblHigh + " " + dblLow + " " + dblClose + " "+ dblAdjClose + " "+ intVolume);
-                System.out.printf("Date: %-12s Open: $%-13f High: $%-13f Low: $%-13f Close: $%-13f Adjusted Close: $%-13f Volume: %,-14d DOLLAR VOLUME: $%,-20.2f AVERAGE PRICE: $%,-15f\n", date,dblOpen,dblHigh,dblLow,dblClose,dblAdjClose, intVolume, (dblClose*intVolume), (dblOpen+dblLow+dblHigh+dblClose)/4);
+         
+                System.out.printf("Date: %-12s Open: $%-13f High: $%-13f Low: $%-13f Close: $%-13f Adjusted Close: $%-13f Volume: %,-14d DOLLAR VOLUME: $%,-20.2f AVERAGE PRICE: $%,-15f\n", 
+                        date,stockPerformance[0],stockPerformance[1],stockPerformance[2],stockPerformance[3],stockPerformance[4], 
+                        intVolume, (stockPerformance[3]*intVolume), (stockPerformance[0]+stockPerformance[1]+stockPerformance[2]+stockPerformance[3])/4);
             }
 
         } catch (FileNotFoundException e) {
