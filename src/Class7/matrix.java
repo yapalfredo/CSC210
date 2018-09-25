@@ -13,15 +13,34 @@ public class matrix {
     
     public static void main(String [] args){
         
+        threeByThree();
+    }
+    
+    public static void tenByTen(){
         
         int a[][] = new int[10][10];
         
         for (int row = 1; row <=10; row++) {
             for (int col = 1; col <=10; col++) {
-                System.out.print((row * col) + " ");
+              //  System.out.print((row * col) + " ");
+                System.out.printf("%3 d ", (row*col));
             }
             System.out.println("");
         }
+    }
+    
+    public static void threeByThree(){
+        
+        int f[][] = { {1,2,4}, {3,2,2}, {5,8,4}};
+        
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < f[i].length; j++) {
+                System.out.print(f[i][j] + " ");
+            }
+            System.out.println("");
+        }
+        
+        
     }
     
 }
