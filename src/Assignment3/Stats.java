@@ -104,14 +104,18 @@ public class Stats {
         return getDblSum();
     }
     
-    public  int Average(int[] arr, int SIZE)
-    {
-        return 0;
+    public int Average(int SIZE)
+    {   
+        setIntAvg(getIntSum()/SIZE);
+       
+        return getIntAvg();
     }
     
-    public  double Average(double[] arr, int SIZE)
+    public double Average(double SIZE)
     {
-        return 0;
+        setDblAvg(getDblSum() / SIZE);
+        
+        return getDblAvg();
     }
     
     public  int StandardDeviation(int[] arr, int SIZE)

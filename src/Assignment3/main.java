@@ -68,32 +68,57 @@ public class main {
                     intVolume = 1;
                 }
 
-                System.out.printf("Date: %-12s Open: $%-13f High: $%-13f Low: $%-13f Close: $%-13f Adjusted Close: $%-13f Volume: %,-14d DOLLAR VOLUME: $%,-20.2f AVERAGE PRICE: $%,-15f\n",
-                        date, dailyPrices[0], dailyPrices[1], dailyPrices[2], dailyPrices[3], dailyPrices[4],
-                        intVolume, (dailyPrices[3] * intVolume), (dailyPrices[0] + dailyPrices[1] + dailyPrices[2] + dailyPrices[3]) / 4);
+//                System.out.printf("Date: %-12s Open: $%-13f High: $%-13f Low: $%-13f Close: $%-13f Adjusted Close: $%-13f Volume: %,-14d DOLLAR VOLUME: $%,-20.2f AVERAGE PRICE: $%,-15f\n",
+//                        date, dailyPrices[0], dailyPrices[1], dailyPrices[2], dailyPrices[3], dailyPrices[4],
+//                        intVolume, (dailyPrices[3] * intVolume), (dailyPrices[0] + dailyPrices[1] + dailyPrices[2] + dailyPrices[3]) / 4);
                 
                
-               openStats.Sum(dailyPrices,0);    openStats.Sum(dailyPricesIntCopy, 0);
+               openStats.Sum(dailyPrices, 0);    openStats.Sum(dailyPricesIntCopy, 0);
                highStats.Sum(dailyPrices, 1);   highStats.Sum(dailyPricesIntCopy, 1);
                lowStats.Sum(dailyPrices, 2);    lowStats.Sum(dailyPricesIntCopy, 2);
                closeStats.Sum(dailyPrices, 3);  closeStats.Sum(dailyPricesIntCopy, 3);
                
                counter++;
             }
+                openStats.Average(SIZE); openStats.Average((double)SIZE);
+                highStats.Average(SIZE); highStats.Average((double)SIZE);
+                lowStats.Average(SIZE);  lowStats.Average((double)SIZE);
+                closeStats.Average(SIZE); closeStats.Average((double)SIZE);
+               
+                
             System.out.println("");
             System.out.println("");
 
                System.out.printf("The sum of OPEN in INT data type is: $%,-13d" , openStats.getIntSum());
                System.out.println("");
-               System.out.printf("The sum of HIGH in INT data type is: $%,-13d" , highStats.getIntSum());
-               System.out.println("");
-               System.out.printf("The sum of LOW in INT data type is: $%,-13d" , lowStats.getIntSum());
-               System.out.println("");
-               System.out.printf("The sum of CLOSE in INT data type is: $%,-13d" , closeStats.getIntSum());
+               System.out.printf("The avg of OPEN in INT data type is: $%,-13d" , openStats.getIntAvg());
                System.out.println("");
                System.out.println("");
                
+               
+               System.out.printf("The sum of HIGH in INT data type is: $%,-13d" , highStats.getIntSum());
+               System.out.println("");
+               System.out.printf("The avg of HIGH in INT data type is: $%,-13d" , highStats.getIntAvg());
+               System.out.println("");
+               System.out.println("");
+               
+               System.out.printf("The sum of LOW in INT data type is: $%,-13d" , lowStats.getIntSum());
+               System.out.println("");
+               System.out.printf("The avg of LOW in INT data type is: $%,-13d" , lowStats.getIntAvg());
+               System.out.println("");
+               System.out.println("");
+               
+               System.out.printf("The sum of CLOSE in INT data type is: $%,-13d" , closeStats.getIntSum());
+               System.out.println("");
+               System.out.printf("The avg of CLOSE in INT data type is: $%,-13d" , closeStats.getIntAvg());
+               System.out.println("");              
+               System.out.println("");
+               
+               
+               
                System.out.printf("The sum of OPEN in DOUBLE data type is: $%,-13f" , openStats.getDblSum());
+               System.out.println("");
+               System.out.printf("The avg of OPEN in DOUBLE data type is: $%,-13f" , openStats.getDblAvg());
                System.out.println("");
                System.out.printf("The sum of HIGH in DOUBLE data type is: $%,-13f" , highStats.getDblSum());
                System.out.println("");
