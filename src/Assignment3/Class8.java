@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Class8;
+package Assignment3;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -44,7 +44,8 @@ public class Class8 {
                     for (int i = 0; i < 5; i++) {
                         dailyPrices[i] = Double.parseDouble(lineArray[i + 1]);
                     }
-
+                 
+                    
                     intVolume = Integer.parseInt(lineArray[6]);
                 } catch (NumberFormatException e) {
                     // System.out.println(e.getLocalizedMessage());
