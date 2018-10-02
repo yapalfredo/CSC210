@@ -1,13 +1,14 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ Using a for loop find the max and the min. 
+ Max is easy because we know the lower boundary which is 0. 
+ Then use the same logic to find the min meaning which boundary do we have to find first?
+ This is one algorithm to find min or max. 
  */
 package Assignment3;
 
 import java.util.Arrays;
 
-public class Number3 {
+public class MinMax {
     public static void main(String [] args)
     {
         int max=0;
