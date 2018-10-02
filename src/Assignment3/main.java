@@ -56,14 +56,13 @@ public class main {
                         }            
                         
                     intVolume = Integer.parseInt(lineArray[6]);     // Volume Column
-                } catch (NumberFormatException e) {
-                    // System.out.println(e.getLocalizedMessage());
-                    e.printStackTrace();
-                    dailyPrices[0] = 1;
-                    dailyPrices[1] = 1;
-                    dailyPrices[2] = 1;
-                    dailyPrices[3] = 1;
-                    dailyPrices[4] = 1;
+                } catch (NumberFormatException e) {                  
+                    e.printStackTrace();                    
+                    for (int i = 0; i < SIZE; i++) 
+                    {
+                        dailyPrices[i] = 1;
+                    }             
+   
                     intVolume = 1;
                 }
 
