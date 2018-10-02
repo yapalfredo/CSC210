@@ -48,21 +48,21 @@ public class main {
                 lineArray = line.split(",");
                 String date = lineArray[0];         //Date Column
 
-                try {
-                        for (int i = 0; i < SIZE; i++) 
+                 for (int i = 0; i < SIZE; i++) 
                         {
+                            try {
                             dailyPrices[i] = Double.parseDouble(lineArray[i + 1]);
                             dailyPricesIntCopy[i] = (int)dailyPrices[i];            //makes an int copy
-                        }            
-                        
-                    intVolume = Integer.parseInt(lineArray[6]);     // Volume Column
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                                 dailyPrices[i] = 1;
+                            }
+                        }     
+                try {
+                       
+                 intVolume = Integer.parseInt(lineArray[6]);     // Volume Column
                 } catch (NumberFormatException e) {                  
-                    e.printStackTrace();                    
-                    for (int i = 0; i < SIZE; i++) 
-                    {
-                        dailyPrices[i] = 1;
-                    }             
-   
+                    e.printStackTrace();    
                     intVolume = 1;
                 }
 
