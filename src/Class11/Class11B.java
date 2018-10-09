@@ -18,7 +18,7 @@ import Class9.Stats;
  *
  * @author lkhan
  */
-public class Class11 {
+public class Class11B {
 
     /**
      * @param args the command line arguments
