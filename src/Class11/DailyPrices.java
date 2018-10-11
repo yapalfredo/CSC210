@@ -116,22 +116,12 @@ public class DailyPrices {
     }
 
     public float getDailyAverage()
-    {     
-        final float[] pricesArray = { getOpen(), getHigh(), getLow(), getClose(), getAdjClose()};
-        Stats.sumOfElements(pricesArray);
-        float dailyAvg = (float)Stats.averageOfElements(pricesArray);
-            
-        return dailyAvg;
+    {         
+        return  Stats.sumOfElements(new float[]{getOpen(), getHigh(), getLow(), getClose(), getAdjClose()});
     }
     
     public float getStandardDeviation()
     {
-        final float[] pricesArray = { getOpen(), getHigh(), getLow(), getClose(), getAdjClose()};
-      float std = (float)Stats.stdevOfElements(pricesArray, "P");
-      
-      return std;
+      return Stats.stdevOfElements(new float[] { getOpen(), getHigh(), getLow(), getClose(), getAdjClose()}, "p");
     }
-    
-    
-    
 }

@@ -43,7 +43,7 @@ public class Stats {
         double sum = sumOfElements(a);
         return sum/a.length;
     }
-     public static double averageOfElements(float a[]){        
+     public static float averageOfElements(float a[]){        
         //the above code is the same in sumOfElements method so we can call that here.
         float sum = sumOfElements(a);
         return sum/a.length;
@@ -79,7 +79,7 @@ public class Stats {
         
         return Math.sqrt(variance);
     }
-    public static double stdevOfElements(float a[],String type){
+    public static float stdevOfElements(float a[],String type){
         double sum = 0;
         double average = averageOfElements(a);
         for (int i = 0; i < a.length; i++) {
@@ -92,6 +92,6 @@ public class Stats {
             variance = sum/a.length;
         }
         
-        return Math.sqrt(variance);
+        return (float)Math.sqrt(variance);
     }
 }
