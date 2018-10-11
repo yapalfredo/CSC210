@@ -34,38 +34,34 @@ public class Class11B {
             BufferedReader buffread = new BufferedReader(filereader);
             buffread.readLine();//header and we are reading off so we don't have to deal with it.
             String line = "";                        
-            ArrayList<String[]> msft = new ArrayList();
+            ArrayList<DailyPrices> msft = new ArrayList();
          
+            
+            DailyPrices dailyPrices;
             while((line=buffread.readLine())!=null){
-               msft.add(line.trim().split(","));
+                String[] lineArray = line.trim().split(",");
+                dailyPrices = new DailyPrices(lineArray);
+               msft.add(dailyPrices);
             }
             
             System.out.println("We have stored our data from the file in to an array");
             //Step3 A for lop to do analytics
-            float [] dailyPrices = new float[5];
+            //float [] dailyPrices = new float[5];
             int volume;
             String date;
             int lookBack = 7;
             float shortMemory[] = new float[lookBack];
             for(int i = 0;i<msft.size();i++){
                 
-                String lineArray[] = msft.get(i);
-                  
-                  date = lineArray[0];
-                  
-                for(int j = 0;j<dailyPrices.length;j++){
-                    dailyPrices[j] = Float.parseFloat(lineArray[j+1]);
-                }
-                
-                volume = Integer.parseInt(lineArray[6]);
                 if(i>(lookBack-1)){
                     for (int k = 0; k<shortMemory.length ; k++) {
-                        shortMemory[k] = Float.parseFloat(msft.get(i-k-1)[4]);
+                        shortMemory[k] = msft.get(i-k-1).getClose();
                     }
                     System.out.printf("Date:%s,  Open:%f,  High:%f,  Low:%f,  Close:%f,"
-                        + "  AdjClose:%f,  Volume:%,d,Dollar   Volume:%,f,  MA7:%f\n",
-                        date,dailyPrices[0],dailyPrices[1],dailyPrices[2],dailyPrices[3],dailyPrices[4],
-                        volume,volume*dailyPrices[3], Stats.averageOfElements(shortMemory));
+                        + "  AdjClose:%f,  Volume:%,d,   Dollar Volume:%,f,  MA7:%f,"
+                        +"   Average Price:%f,   Stdev of Daily Price: %f\n",
+                        msft.get(i).getDate(),msft.get(i).getOpen(),msft.get(i).getHigh(),msft.get(i).getLow(),msft.get(i).getClose(),msft.get(i).getAdjClose(),
+                        msft.get(i).getVolume(),msft.get(i).getDollarVolume(), Stats.averageOfElements(shortMemory), msft.get(i).getDailyAverage(), msft.get(i).getStandardDeviation());
                 }
             }
         } 

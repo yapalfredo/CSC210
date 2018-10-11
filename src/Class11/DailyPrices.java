@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package Class11;
+import Class9.Stats;
+
 
 /**
  *
@@ -17,7 +19,8 @@ public class DailyPrices {
     private float close;
     private float adjClose;
     private int volume;
-
+    private float dollarVolume;
+    
     //EMPTY CONSTRUCTOR
     public DailyPrices()
     {
@@ -45,6 +48,11 @@ public class DailyPrices {
         this.close = Float.parseFloat(prices[4]);
         this.adjClose = Float.parseFloat(prices[5]);
         this.volume = Integer.parseInt(prices[6]);
+        setDollarVolume(close, volume);
+    }
+
+    public float getDollarVolume() {
+        return dollarVolume;
     }
 
     public String getDate() {
@@ -102,10 +110,27 @@ public class DailyPrices {
     public void setVolume(int volume) {
         this.volume = volume;
     }
+
+    private void setDollarVolume(float close, int volume) {
+        this.dollarVolume = close * volume;
+    }
+
+    public float getDailyAverage()
+    {     
+        final float[] pricesArray = { getOpen(), getHigh(), getLow(), getClose(), getAdjClose()};
+        Stats.sumOfElements(pricesArray);
+        float dailyAvg = (float)Stats.averageOfElements(pricesArray);
+            
+        return dailyAvg;
+    }
     
-    
-    
-    
+    public float getStandardDeviation()
+    {
+        final float[] pricesArray = { getOpen(), getHigh(), getLow(), getClose(), getAdjClose()};
+      float std = (float)Stats.stdevOfElements(pricesArray, "P");
+      
+      return std;
+    }
     
     
     
