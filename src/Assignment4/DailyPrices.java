@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package Assignment4;
-import Class12.*;
-import Class11.*;
 import Class9.Stats;
 
 
