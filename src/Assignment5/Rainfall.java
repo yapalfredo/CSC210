@@ -21,7 +21,7 @@ public class Rainfall {
    
    private int totalRainfall;
    
-   Rainfall()
+   public Rainfall()
    {
        setTotalRainfall();
    }
@@ -82,13 +82,13 @@ public class Rainfall {
         }
         
         System.out.println("");
-        System.out.println("The month with the most rain is: " + month[mostMonth] + ".");
+        System.out.println("The month with the most rain is: " + month[mostMonth]);
         System.out.println("Total rain for that month is: " + (int)monthRainfall[mostMonth]);
         System.out.printf("Average rain for that month is: %.2f" ,(monthRainfall[mostMonth]) / monthDays[mostMonth]);
         System.out.println("");
         
         System.out.println("");
-        System.out.println("The month with the least rain is: " + month[leastMonth] + ".");
+        System.out.println("The month with the least rain is: " + month[leastMonth]);
         System.out.println("Total rain for that month is: " + (int)monthRainfall[leastMonth]);
         System.out.printf("Average rain for that month is: %.2f" ,(monthRainfall[leastMonth]) / monthDays[leastMonth]);
         System.out.println("");
