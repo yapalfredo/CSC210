@@ -53,8 +53,7 @@ public class ProgrammingChallenge1 {
     }
     
     public static void AverageMonthlyRainFall()
-    {
-        
+    {        
         System.out.printf("The average rainfall for the year is: %.2f", rf.averageRainfallForTheYear());
         System.out.println("");
     }
