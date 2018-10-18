@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Class12;
+package Assignment4;
 
+import Class12.*;
 import Class11.*;
 import Class9.Stats;
 import java.io.BufferedReader;
@@ -24,7 +25,7 @@ import java.util.Map;
  *
  * @author lkhan
  */
-public class Class12 {
+public class Assignment4 {
 
     /**
      * @param args the command line arguments
