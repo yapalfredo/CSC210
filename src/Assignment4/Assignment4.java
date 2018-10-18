@@ -5,22 +5,15 @@
  */
 package Assignment4;
 
-import Class12.*;
-import Class11.*;
+
 import Class9.Stats;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import Class9.Stats;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Scanner;
-import java.util.Set;
-import java.util.Map;
+
 /**
  *
  * @author lkhan
