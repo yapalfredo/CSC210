@@ -78,12 +78,12 @@ public class Class12 {
                 
                 System.out.printf("Date:%s,  Open:%f,  High:%f,  Low:%f,  Close:%f,"
                         + "  AdjClose:%f,  Volume:%,d,   Dollar Volume:%,f,"
-                        +"   Average Price:%f,   Stdev of Daily Price: %f\n",  msft.get(input).getDate(),
+                        + "   Average Price:%f,   Stdev of Daily Price: %f\n",  msft.get(input).getDate(),
                         msft.get(input).getOpen(), msft.get(input).getHigh(), msft.get(input).getLow(), 
                         msft.get(input).getClose(), msft.get(input).getAdjClose(), msft.get(input).getVolume(),  
-                        msft.get(input).getDailyAverage(), msft.get(input).getStandardDeviation());
+                        msft.get(input).getDollarVolume(), msft.get(input).getDailyAverage(), 
+                        msft.get(input).getStandardDeviation());
                  
-                System.out.println(msft.get(input).getOpen());
                 
             }
             else
