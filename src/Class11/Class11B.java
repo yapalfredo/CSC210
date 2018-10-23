@@ -5,13 +5,12 @@
  */
 package Class11;
 
-import Class9.Stats;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import Class9.Stats;
 /**
@@ -47,8 +46,7 @@ public class Class11B {
             System.out.println("We have stored our data from the file in to an array");
             //Step3 A for lop to do analytics
             //float [] dailyPrices = new float[5];
-            int volume;
-            String date;
+           
             int lookBack = 7;
             float shortMemory[] = new float[lookBack];
             for(int i = 0;i<msft.size();i++){

@@ -25,6 +25,7 @@ public class Rainfall {
    {
        setTotalRainfall();
    }
+   
     public int getTotalRainfall() {
         return totalRainfall;
     }
