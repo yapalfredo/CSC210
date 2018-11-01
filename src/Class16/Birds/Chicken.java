@@ -9,6 +9,17 @@ package Class16.Birds;
  *
  * @author al
  */
-public class Chicken {
+public class Chicken extends Birds{
+    
+    public Chicken()
+    {
+        
+    }
+    
+       @Override
+    public void makeNoise(){
+        System.out.println("I am in the "+this.getClass().getSimpleName()+" class");
+        System.out.println("I make a pok pok pok sound");
+    }
     
 }

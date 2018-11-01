@@ -9,6 +9,7 @@ import java.util.HashSet;
 import java.util.Set;
 import Class16.MythicalCreatures.*;
 import Class16.Felines.*;
+import Class16.Birds.*;
 /**
  *
  * @author lkhan
@@ -76,7 +77,18 @@ public class Class16 {
         dragon.reproduce();
         dragon.theWayImove();
         
-        
+        Chicken ck = new Chicken();
+       ck.setEars(2);
+       ck.setEyes(2);
+       ck.setHands(0);
+       ck.setLegs(2);
+       ck.setNose(1);
+       ck.setTail(1);
+       ck.setSize("small");
+       ck.makeNoise();
+       ck.eat();
+       ck.theWayImove();
+       ck.reproduce();
     }
     
 }
