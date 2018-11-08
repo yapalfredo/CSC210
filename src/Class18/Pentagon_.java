@@ -21,7 +21,8 @@ public class Pentagon_ extends Shape_
     }
 
     @Override
-    protected void calcArea() {
+    protected void calcArea() 
+    {
        if (this.a > 0)
        {
            System.out.println("The area of the " + this.shapeType + ": "+ computeArea(a));
@@ -57,7 +58,8 @@ public class Pentagon_ extends Shape_
     }
 
     @Override
-    protected void calcDiagonal() {
+    protected void calcDiagonal() 
+    {
         
     }
     

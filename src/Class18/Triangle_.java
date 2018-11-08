@@ -9,7 +9,8 @@ package Class18;
  *
  * @author al
  */
-public class Triangle_ extends Shape_ {
+public class Triangle_ extends Shape_ 
+{
     private short base;
     private short height;
     private short a;
@@ -21,17 +22,20 @@ public class Triangle_ extends Shape_ {
     }
 
     @Override
-    protected void calcArea() {
+    protected void calcArea()
+    {
         
     }
 
     @Override
-    protected void calcPerimeter() {
+    protected void calcPerimeter() 
+    {
        
     }
 
     @Override
     protected void calcDiagonal() {
+        
         System.out.println("A diagonal is not available for a triangle.");
     }
     

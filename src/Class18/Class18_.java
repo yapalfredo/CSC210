@@ -8,12 +8,14 @@ package Class18;
  *
  * @author al
  */
-public class Class18_{
+public class Class18_
+{
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         // TODO code application logic here
         Shape_ rectangle = new Rectangle_("Rectangle"); //polymorphism
         
