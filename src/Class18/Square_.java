@@ -8,7 +8,7 @@ package Class18;
 
 /**
  *
- * @author al
+ * @author lakhan
  */
 public class Square_ extends Shape_{
     private short side;

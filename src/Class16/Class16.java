@@ -5,8 +5,7 @@
  */
 package Class16;
 
-import java.util.HashSet;
-import java.util.Set;
+
 import Class16.MythicalCreatures.*;
 import Class16.Felines.*;
 import Class16.Birds.*;

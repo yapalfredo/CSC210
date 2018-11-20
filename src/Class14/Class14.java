@@ -16,9 +16,9 @@ public class Class14 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Homework.Question3();
-        Homework.Question4();
-        Homework.Question6And7();
+//        Homework.Question3();
+//        Homework.Question4();
+//        Homework.Question6And7();
         
 //        Rainfall rainfall = new Rainfall();
 //        rainfall.setRainfalls();
@@ -49,6 +49,7 @@ public class Class14 {
         System.out.println("Eyes: "+chicken.getNumberOfEyes());
         System.out.println("Legs: "+chicken.getNumberOfLegs());
        
+        
     }
     
 }

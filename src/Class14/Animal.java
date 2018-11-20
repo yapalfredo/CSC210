@@ -16,7 +16,7 @@ public class Animal {
     private byte numberEars;
     
     public Animal(){
-        System.out.println("I am in the animal class");
+       System.out.println("I am in the animal class");
     }
     public void makeNoise(){
         System.out.println("Make a generic noise");

@@ -6,26 +6,20 @@ package Class18;
 
 /**
  *
- * @author al
+ * @author lakhan
  */
-public class Rectangle_ extends Shape_
-{
+public class Rectangle_ extends Shape_{
     private short length;
     private short width;
     
-    public Rectangle_(String shapeType)
-    {
+    public Rectangle_(String shapeType){
       super(shapeType);
     }
     @Override
-    protected void calcArea()
-    {
-        if(this.length > 0 && this.width > 0)
-        {
+    protected void calcArea(){
+        if(this.length > 0 && this.width > 0){
             System.out.println("The area of the rectanle is "+ this.length*this.width);
-        }
-        else
-        {
+        }else{
             System.out.println("Please enter the length of the rectangle");
             this.length = kb.nextShort();
             System.out.println("Please enter the width of the rectangle");
@@ -36,14 +30,10 @@ public class Rectangle_ extends Shape_
     }
     
     @Override
-    protected void calcPerimeter()
-    {
-        if(this.length > 0 && this.width > 0)
-        {
+    protected void calcPerimeter(){
+        if(this.length > 0 && this.width > 0){
             System.out.println("The perimeter of the rectanle is "+ 2*(this.length+this.width));
-        }
-        else
-        {
+        }else{
             System.out.println("Please enter the length of the rectangle");
             this.length = kb.nextShort();
             System.out.println("Please enter the width of the rectangle");
@@ -53,14 +43,10 @@ public class Rectangle_ extends Shape_
         }
     }
     @Override
-    protected void calcDiagonal()
-    {
-        if(this.length > 0 && this.width > 0)
-        {
+    protected void calcDiagonal(){
+        if(this.length > 0 && this.width > 0){
             System.out.println("The diagonal of the rectanle is "+ Math.sqrt(Math.pow(this.length, 2)+Math.pow(this.width, 2)));
-        }
-        else
-        {
+        }else{
             System.out.println("Please enter the length of the rectangle");
             this.length = kb.nextShort();
             System.out.println("Please enter the width of the rectangle");

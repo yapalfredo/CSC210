@@ -6,56 +6,41 @@ package Class18;
 
 /**
  *
- * @author al
+ * @author lakhan
  */
-public class Circle_ extends Shape_
-{
+public class Circle_ extends Shape_{
     private short radius;
     
-    public Circle_(String shapeType)
-    {
+    public Circle_(String shapeType){
       super(shapeType);
     }
     
     @Override
-    protected void calcArea()
-    {
-        if(this.radius > 0)
-        {
-            System.out.println("The area of the "+ this.shapeType+": " + Math.PI*this.radius*this.radius);
-        }
-        else
-        {
+    protected void calcArea(){
+        if(this.radius > 0){
+            System.out.println("The area of the "+ this.shapeType+": " + (Math.PI*this.radius*this.radius));
+        }else{
             System.out.println("Please enter the radius of the "+this.shapeType);
             this.radius = kb.nextShort();
-            System.out.println("The area of the "+ this.shapeType+": " + Math.PI*this.radius*this.radius);
+            System.out.println("The area of the "+ this.shapeType+": " + (Math.PI*this.radius*this.radius));
         }
     }
     
     @Override
-    protected void calcPerimeter()
-    {
-        if(this.radius > 0)
-        {
-            System.out.println("The perimeter of the "+ this.shapeType+": " + 2*Math.PI*this.radius);
-        }
-        else
-        {
+    protected void calcPerimeter(){
+        if(this.radius > 0){
+            System.out.println("The perimeter of the "+ this.shapeType+": " + (2*Math.PI*this.radius));
+        }else{
             System.out.println("Please enter the radius of the "+this.shapeType);
             this.radius = kb.nextShort();
-            System.out.println("The perimeter of the "+ this.shapeType+": " + 2*Math.PI*this.radius);
+            System.out.println("The perimeter of the "+ this.shapeType+": " + (2*Math.PI*this.radius));
         }
     }
-    
     @Override
-    protected void calcDiagonal()
-    {
-        if(this.radius > 0)
-        {
+    protected void calcDiagonal(){
+        if(this.radius > 0){
             System.out.println("The diagonal of the "+ this.shapeType+": " + 2*this.radius);
-        }
-        else
-        {
+        }else{
             System.out.println("Please enter the radius of the "+this.shapeType);
             this.radius = kb.nextShort();
             

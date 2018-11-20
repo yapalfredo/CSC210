@@ -6,15 +6,13 @@ package Class18;
 import java.util.Scanner;
 /**
  *
- * @author al
+ * @author lakhan
  */
-public abstract class Shape_ 
-{
+public abstract class Shape_{
     
     protected String shapeType;
     protected Scanner kb;
-    public Shape_(String shapeType)
-    {
+    public Shape_(String shapeType){
         this.shapeType = shapeType;
         this.kb = new Scanner(System.in);
     }
@@ -23,8 +21,7 @@ public abstract class Shape_
     protected abstract void calcPerimeter();
     protected abstract void calcDiagonal();
     
-    protected void getShapeType()
-    {
+    protected void getShapeType(){
         System.out.println("The type of shape: "+this.shapeType);
     }
     
